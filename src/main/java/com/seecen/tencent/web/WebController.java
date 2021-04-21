@@ -8,16 +8,16 @@ public class WebController {
     @RequestMapping("/register.html")
     public String register() {
         // 转发跳转到templates下面的register.html页面
-        return "/register";
+        return "register";
     }
 
     @RequestMapping("/login.html")
     public String login() {
-        return "/login";
+        return "login";
     }
 
     @RequestMapping("/index.html")
     public String index() {
-        return "/index";
+        return "index";
     }
 }
