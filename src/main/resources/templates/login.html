@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>腾讯桌面</title>
+    <link rel="shortcut icon" href="/images/qq.ico">
+    <link rel="stylesheet" href="/css/core.css">
+    <link rel="stylesheet" href="/css/login.css">
+</head>
+<body>
+    <!-- 桌面 -->
+    <div id="desktop">
+        <ul>
+            <li id="qq">
+                <img src="/images/logo.png"><br>
+                <span>腾讯QQ</span>
+            </li>
+            <li>
+                <img src="/images/game.ico"><br>
+                <span>英雄联盟</span>
+            </li>
+            <li>
+                <img src="/images/360.ico"><br>
+                <span>360管家</span>
+            </li>
+            <li>
+                <img src="/images/360sd.ico"><br>
+                <span>360杀毒</span>
+            </li>
+            <li>
+                <img src="/images/baidu.ico"><br>
+                <span>百度网盘</span>
+            </li>
+            <li>
+                <img src="/images/douban.ico"><br>
+                <span>豆瓣</span>
+            </li>
+            <li>
+                <img src="/images/idea.ico"><br>
+                <span>Idea</span>
+            </li>
+            <li>
+                <img src="/images/thunder.ico"><br>
+                <span>迅雷</span>
+            </li>
+            <li>
+                <img src="/images/tomcat.ico"><br>
+                <span>Tomcat</span>
+            </li>
+        </ul>
+    </div>
+    <!-- 任务栏 -->
+    <div id="taskbar">
+        <ul id="task">
+            <li id="qq_task"></li>
+        </ul>
+    </div>
+    <!-- app栏 -->
+    <div id="app">
+        <div id="tencent" draggable="true">
+            <div id="header">
+                <div id="left_tool" class="fl">QQ</div>
+                <div id="right_tool" class="fr">
+                    <a id="setting" href="javascript:;"></a>
+                    <a id="small" href="javascript:;"></a>
+                    <a id="cls" href="javascript:;"></a>
+                </div>
+            </div>
+            <div id="bodyer">
+                <img id="face" src="/images/default_face.png">
+                <form action="/doLogin" method="post">
+                    <ul>
+                        <li class="rltv">
+                            <input th:value="${username}" name="username" id="username" class="txt account" placeholder="QQ号码/手机/邮箱">
+                            <span class="focus_border"></span>
+                        </li>
+                        <li class="rltv">
+                            <input name="password" class="txt pwd" placeholder="密码" type="password">
+                            <span class="focus_border"></span>
+                        </li>
+                        <li id="box">
+                            <span>自动登录</span>
+                            <span>记住密码</span>
+                            <a href="javascript:;">找回密码</a>
+                        </li>
+                        <li class="clear"><input id="submitBtn" type="submit" value="登录"></li>
+                        <li>
+                            <a id="register" href="javascript:;">注册帐号</a>
+                            <a id="ewm" href="javascript:;"></a>
+                        </li>
+                    </ul>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script src="/js/jquery-2.1.1.min.js"></script>
+    <script src="/js/core.js"></script>
+    <div th:replace="dialog::msgDialog"></div>
+    <script src="/js/login.js"></script>
+</body>
+</html>

@@ -1,0 +1,223 @@
+html {
+    background: url("/images/qqbg.jpg") no-repeat center -300px;
+}
+#desktop li {
+    width:75px;
+    height: 65px;
+    float:left;
+    padding-top: 10px;
+    margin-right:20px;
+    text-align: center;
+    user-select: none;
+}
+#desktop img{
+    width:40px;
+    height: 40px;
+}
+#desktop li:hover {
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+.choose {
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.8) !important;
+}
+
+#taskbar {
+    position:fixed;
+    bottom:0px;
+    left:0px;
+    height: 30px;
+    width:100%;
+    border-top: 1px solid slategray;
+    background: linear-gradient(180deg, rgba(21, 73, 96, 0.8),
+    rgba(187, 206, 209, 0.8));
+}
+
+#tencent {
+    display:none;
+    width:430px;
+    height: 330px;
+    border-radius: 4px;
+    box-shadow: 0 0 8px black;
+    position:absolute;
+    left: calc(50% - 215px);
+    z-index: 5;
+    top: 200px;
+    background-color: white;
+    transition: all 0.3s;
+}
+.small {
+    transform: scale(0) skew(-90deg, 0deg) rotate3d(1,1,1,720deg);
+    left:0px !important;
+    top:530px !important;
+}
+#header {
+    height: 125px;
+    background: url("/images/login_bg.gif") no-repeat center;
+    background-size: 430px 125px;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+}
+
+#left_tool {
+    background: url("/images/qq_tools.png") no-repeat;
+    text-indent: 32px;
+    color: white;
+    font-size: 22px;
+    line-height: 32px;
+    position: relative;
+    top:5px;
+    left:5px;
+}
+#right_tool {
+    width:90px;
+}
+#right_tool>a {
+    display:block;
+    float:left;
+    width:30px;
+    height: 30px;
+}
+#right_tool>a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-bottom-left-radius:4px;
+    border-bottom-right-radius:4px;
+}
+#setting {
+    background: url("/images/setting.png") no-repeat center;
+}
+#small {
+    background: url("/images/small.png") no-repeat center;
+}
+
+#cls {
+    background: url("/images/close.png") no-repeat center;
+}
+#cls:hover {
+    background-color: #FF5439 !important;
+    border-top-right-radius:4px !important;
+    border-bottom-right-radius:0px !important;
+}
+#bodyer {
+    margin-top:35px;
+    text-align: center;
+}
+.txt {
+    line-height: 35px;
+    width:240px;
+    border:none;
+    outline: none;
+    border-bottom: 1px solid #e5e5e5;
+    text-indent: 22px;
+}
+.txt:hover {
+    border-color: #c1c1c1;
+}
+#bodyer li{
+    line-height: 35px;
+}
+.account {
+    background: url("/images/qq.png") no-repeat left center;
+}
+.account:focus {
+    background: url("/images/qq_focus.png") no-repeat left center;
+}
+.pwd {
+    background: url("/images/passwd.png") no-repeat left center;
+}
+.pwd:focus {
+    background: url("/images/passwd_focus.png") no-repeat left center;
+}
+
+.focus_border {
+    width:0px;
+    height: 0px;
+    display:block;
+    border-bottom:1px solid #2b72ff;
+    transition: all 0.3s;
+    position:absolute;
+    left:95px;
+    bottom:0px;
+}
+.txt:focus + .focus_border {
+    width:240px;
+}
+
+#box>*{
+    display:block;
+    float:left;
+    font-size: 12px;
+    color:#c1c1c1;
+}
+#box>span {
+    background: url("/images/checkbox_normal.png") no-repeat left 8px;
+    margin-right:25px;
+    user-select: none;/*不让选择文字*/
+    cursor: default;/*使用默认鼠标指针*/
+    text-indent: 22px;
+}
+#box{
+    width:240px;
+    margin:auto;
+    line-height: 35px;
+}
+.checked {
+    background-image: url("/images/checkbox_check.png") !important;
+}
+
+#submitBtn {
+    width: 242px;
+    line-height: 32px;
+    border-radius: 4px;
+    box-shadow: 0 0 4px #337EEB;
+    background-color: #00B6FA;
+    text-align: center;
+    color:white;
+    font-size: 14px;
+    border:none;
+    outline: none;
+}
+
+#register {
+    position:absolute;
+    bottom:0px;
+    left:10px;
+    color:#c1c1c1;
+    font-size:12px;
+}
+#ewm {
+    position:absolute;
+    bottom:5px;
+    right:10px;
+    width:30px;
+    height: 30px;
+    background: url("/images/ewm.png") no-repeat center;
+}
+#ewm:hover {
+    background-image: url("/images/ewm_hover.png") !important;
+}
+#face {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    box-shadow: 0 0 5px #46b8da;
+    position: absolute;
+    z-index: 6;
+    left:calc(50% - 35px);
+    top:85px;
+}
+
+#qq_task {
+    background: url("/images/logo.png") no-repeat center rgba(255,255,255,0.4);
+    background-size: 30px 30px;
+    width:42px;
+    height: 30px;
+    float:left;
+    border-radius: 5px;
+    display:none;
+}
+#task {
+    width:80%;
+    margin:auto;
+}

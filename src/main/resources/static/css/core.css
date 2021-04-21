@@ -1,0 +1,48 @@
+ul {
+    padding:0px;
+    margin:0px;
+}
+ul>li {
+    list-style-type: none;
+}
+a {
+    text-decoration: none;
+}
+.fl {
+    float:left;
+}
+.fr {
+    float:right;
+}
+.clear {
+    clear: both;
+}
+* {
+    font-family: -apple-system,"Helvetica Neue",Arial,"PingFang SC","Hiragino Sans GB",STHeiti,"Microsoft YaHei","Microsoft JhengHei","Source Han Sans SC","Noto Sans CJK SC","Source Han Sans CN","Noto Sans SC","Source Han Sans TC","Noto Sans CJK TC","WenQuanYi Micro Hei",SimSun,sans-serif;
+}
+
+#dialog {
+    border-radius: 8px;
+    background: linear-gradient(60deg, rgba(22, 64, 123, 0.9), rgba(120, 65, 123, 0.5));
+    width:300px;
+    box-shadow: 0 0 12px burlywood;
+    position: absolute;
+    z-index: 10;
+    left:calc(50% - 150px);
+    top:calc(50% - 50px);
+    text-align: center;
+    line-height: 100px;
+    color:white;
+    animation: mydialog 2s;
+    animation-fill-mode: forwards; /*让动画保留最后一帧*/
+}
+@keyframes mydialog {
+    10%,30%,50%,70%,90% {transform: rotate(5deg) translateX(5px); }
+    20%,40%,60%,80% {transform: rotate(-5deg) translateX(-5px); }
+    60%{opacity: 1}
+    100% {opacity: 0.3;transform: rotate(0deg)
+    translateY(500px); visibility: hidden;}
+}
+.rltv {
+    position:relative;
+}
