@@ -1,13 +1,12 @@
 #!/usr/bin/env bash
 killTomcat() {
-#  pid = `ps -ef | grep tomcat | grep java |awk '{print $2}'`
-  pid = `jps -l | grep tencent.jar | awk '{print $1}'`
+  #  pid = `ps -ef | grep tomcat | grep java |awk '{print $2}'`
+  pid = $(jps -l | grep tencent.jar | awk '{print $1}')
   echo "jar的pid为 : $pid"
-  if [ "$pid" = "" ]
-    then
-        echo "没有启动jar"
-    else
-        kill -9 $pid
+  if [ "$pid" = "" ]; then
+    echo "没有启动jar"
+  else
+    kill -9 $pid
   fi
 }
 # 在Jenkins中设置的从github上检索下来的源代码直接放入这个目录
@@ -29,15 +28,8 @@ rm -fr $PROJECT_START_POS/tencent.jar
 #cd $TOMCAT_APP_PATH/
 #sh bin/startup.sh
 
-
 # 把源码编译后的jar复制到要运行的目录里面
 cp $PROJECT_PATH/tencent/target/tencent.jar $PROJECT_START_POS/
 
 cd $PROJECT_START_POS/
 java -jar tencent.jar &>out.log &
-
-
-
-
-
-
