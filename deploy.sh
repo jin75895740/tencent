@@ -34,7 +34,7 @@ rm -fr $PROJECT_START_POS/tencent.jar
 cp $PROJECT_PATH/tencent/target/tencent.jar $PROJECT_START_POS/
 
 cd $PROJECT_START_POS/
-java -jar tencent.jar &
+java -jar tencent.jar &>out.log &
 
 
 
