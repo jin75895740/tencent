@@ -1,6 +1,6 @@
 var username = $("#username").val();
 // window.location.host代表获取ip:port
-var url = "ws://" + window.location.host + "/chat?username=" + username;
+var url = "wss://" + window.location.host + "/chat?username=" + username;
 // 与后台建立websocket长连接
 var ws = new WebSocket(url);
 ws.onopen = function(){}
