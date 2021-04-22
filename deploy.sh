@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 killTomcat() {
 #  pid = `ps -ef | grep tomcat | grep java |awk '{print $2}'`
-  pid = `ps -ef | grep jar | grep tencent | awk '{print $2}'`
+  pid = `jps -l | grep tencent.jar | awk '{print $1}'`
   echo "jar的pid为 : $pid"
   if [ "$pid" = "" ]
     then
