@@ -1,7 +1,8 @@
 #!/usr/bin/env bash
+
 killTomcat() {
   #  pid = `ps -ef | grep tomcat | grep java |awk '{print $2}'`
-  pid = $(jps -l | grep tencent.jar | awk '{print $1}')
+  pid=$(jps -l | grep tencent.jar | awk '{print $1}')
   echo "jar的pid为 : $pid"
   if [ "$pid" = "" ]; then
     echo "没有启动jar"
@@ -9,6 +10,7 @@ killTomcat() {
     kill -9 $pid
   fi
 }
+
 # 在Jenkins中设置的从github上检索下来的源代码直接放入这个目录
 cd $PROJECT_PATH/tencent
 mvn clean install
